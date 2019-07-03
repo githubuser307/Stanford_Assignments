@@ -1,0 +1,38 @@
+Before anything else, watch this four-minute video on Youtube. The transcript can be found here.
+
+In this assignment, you program will play the part of the keeper of the Bridge of Death (a.k.a. the old man from Scene 24), and the user will play the part of the travelling knights. Through this assignment, you will gain practice with file reading, lists and strings.
+
+First, create a file called answers.txt containing the following input:
+
+your name? lancelot|launcelot|robin|galahad|of camelot|arthur, king of the britons|king arthur
+your quest? seek the holy grail|seek the grail
+your favorite color? blue
+the capital of Assyria? ashur|kalhu|dur-sharrukin|nineveh|harra
+your favorite color? blue|green
+the airspeed velocity of an unladen swallow? 24mph|11mps
+Each line of the file has the following format:
+
+question? one possible response|another response|a third response
+where the question is separated from the responses by the two-character string "? " and the options themselves are separated by the pipe character ("|"). You can assume that the file is well-formatted. You can also assume that no question or potential response contains either the '?' character or the '|' character. However, you are not guaranteed that questions and answers do not contain spaces.
+
+As the keeper of the Bridge of Death, you will ask each of a successive number of travellers three questions each. The answers.txt files provide the questions that you will ask.
+
+For each traveller, begin by printing a warning message. For the first two travellers, print "Stop! Who would cross the Bridge of Death must answer me these questions three, 'ere the other side he see.". For each additional traveller beyond the first two, just message "Stop!".
+
+Next, we will ask the travellers a series of questions, three per traveller. Each time, we will ask some question, prompting the user for input. Form the question by prepending "What is " to the text contained in the question portion of the line from answers.txt. Strip the user's input of any trailing spaces, '.', or '!' characters. If the user's input does not contain any of our reference options as a substring, ignoring case, we will cast the traveller into the Gorge of Eternal Peril (more on this further down) and immediately move onto the next traveller. For example, the answer "Lancelot", "sir galahad of camelot " and " NO, THIS IS ROBIN " all are successfully matched by the option list Lancelot|Galahad|Robin
+
+Each traveller who wants to cross the bridge will be asked three questions. The first is "What is your name? ". The second is "What is your quest? ". The third will be drawn from the answers.txt file, starting at the question that immediately follows the quest line. You can assume that no questions beyond the first two ask for "your name? " or "your quest? ". For each of these questions, the list of possible answers follows the question in the answers.txt file. Successive travellers will be asked sequential questions from the file. For example, in the answers.txt file given above, there will be a total of four travellers, because there are four non-name, non-quest questions. These questions will, in order, be
+
+"What is your favorite color? "
+"What is the capital of Assyria? "
+"What is your favorite color? "
+"What is the airspeed velocity of an unladen swallow? "
+In this case, each will be the third question asked to four successive travellers, following the questions "What is your name? " and "What is your quest? ". If all of the non-name non-quest questions have been exhausted, you program should end normally. For example, if there were nine lines in answers.txt containing seven non-name, non-quest questions, at most seven travelling knights could visit the keeper.
+
+If the travelling knight answers all three questions satisfactorily, print "Right. Off you go." and move on to the next traveller, prompting for their name.
+
+When a traveller is cast into the Gorge of Eternal Peril, print out their name, in all capital letters, with the text ": Auuuuuuuugh!"appended. For example, if Galahad fails to answer a question correctly, print out "GALAHAD: Auuuuuuuugh!".
+
+Each message you print to the console should be prefaced by "KEEPER: ".
+
+Lastly, if the user answers one of your questions with text that ends with a '?' character, not counting trailing whitespace, you should reply: "KEEPER: What? I don't know that! Auuuuuuuugh!" and immediately end the program.

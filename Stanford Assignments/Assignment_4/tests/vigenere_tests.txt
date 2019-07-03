@@ -1,0 +1,4 @@
+
+encrypt_vigenere("ATTACKATDAWN" with key "LEMON")['L', 'X', 'G', 'O', 'P', 'V', 'E', 'G', 'R', 'N', 'I', 'R']
+decrypt_vigenere "lxgopvegrnir", with key "LEMON")['A', 'T', 'T', 'A', 'C', 'K', 'A', 'T', 'D', 'A', 'W', 'N']
+encrypt_vigenere("ilyas" with key "n")['V', 'Y', 'M', 'N', 'G']

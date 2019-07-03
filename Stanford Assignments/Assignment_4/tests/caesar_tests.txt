@@ -1,0 +1,4 @@
+encrypt_caesar('python')['S', 'B', 'W', 'K', 'R', 'Q']
+decrypt_caesar "sbwkrq" ['P', 'Y', 'T', 'H', 'O', 'N']
+encrypt_caesar "ilyas" ['L', 'O', 'B', 'D', 'V']
+decrypr_caesar "ddccbbaa" ['A', 'A', 'Z', 'Z', 'Y', 'Y', 'X', 'X']
